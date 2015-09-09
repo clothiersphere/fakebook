@@ -2,9 +2,11 @@
     {{>navigation}}
     <div class="container">    
         <div class="row">
+            {{#if currentUser}}
             <div class="span2">
             	{{>sidebar}}
-            </div>            
+            </div>           
+            {{/if}} 
             <div class="span7">
             	{{>yield}}
             </div>

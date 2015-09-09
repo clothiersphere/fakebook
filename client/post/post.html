@@ -1,13 +1,19 @@
 <template name="post">
 	<div class="media">
 		<a class="pull-left" href="#">
-			<img class="media-object" data-src="holder.js/64x64">
+			<img width="60px" class="media-object" src="{{owner}}.png" data-src="holder.js/64x64">
 		</a>
 		<div class="media-body">
 			<h6>{{owner}}</h6>
+			<p>{{currentUser.emails.[0].address}}</p>
 			<p>{{text}}</p>
+
 			
-			<h4 class="media-heading"></h4>
+			<h4 class="media-heading">
+				<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-hand-up"></span> 
+				</a>
+				<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-hand-down"></span></a>
+			</h4>
 			<div class="media">
 				{{#if likeCount}}
 					<span class="badge badge-success">{{likeCount}}</span>
@@ -15,7 +21,9 @@
 				{{/if}}
 			</div>
 			<ul class="unstyled">
+				{{#each postComments}}
 				{{>postcomment}}
+				{{/each}}
 			</ul>
 		</div>
 	</div>

@@ -7,11 +7,11 @@ Router.configure({
 });
 
 
-Router.route('/', {name: 'home'})
+// Router.route('/', {name: 'home'})
 
-// Router.map(function() {
-//   // this.route('splash', {path: '/'})
-//  //  this.route('messages');
-// 	// this.route('events');
-// 	this.route('home');
-// });
+Router.map(function() {
+  this.route('splash', {path: '/'})
+  this.route('messages');
+	this.route('events');
+	this.route('home');
+});

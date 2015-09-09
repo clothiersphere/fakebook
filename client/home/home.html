@@ -4,15 +4,8 @@
       <input placeholder="What's on your mind?" class="input-xxlarge posttext" type="text" name="posttext" value="" id="posttext">
     </div>
     <ul id="postList" class="unstyled">
-    		<!-- {{#each posts}} -->
-    		{{>post}}
-    		{{>post}}
-    		{{>post}}
-    		{{>post}}
-    		{{>post}}
-    		{{>post}}
-    		{{>post}}
-    		
-    		<!-- {{/each}} -->
+    		{{#each posts}}
+    		{{>post}}    		
+    		{{/each}}
     </ul>
 </template>
